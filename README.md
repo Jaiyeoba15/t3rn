@@ -14,16 +14,16 @@ t3rn renders smart contracts blockchain agnostic, meaning they can instantly exe
 
 
 ## Interoperability plugin - integrate with Gateway
-The protocol works well with Parachains regardless of whether they support smart contracts or not. It's designed to be highly compatible with different blockchain architectures and easy integration using one of three kind of Gateway: Intrinsic Programmable, Extrinsic Programmable or Transaction-Only.
+The protocol works well with Parachains regardless of whether they support smart contracts or not. It is designed to be highly compatible with different blockchain architectures and easily integrated using one of three kind of Gateway: Intrinsic Programmable, Extrinsic Programmable or Transaction-Only.
 
-t3rn emphasizes the existent decentralised-solutions and allows multiple blockchains to collaborate on the same contracts repository. By re-using the whole decentralised application blocks, fosters building the decentralised solutions with the freedom to operate on multiple chains.
+t3rn emphasizes the existent decentralised-solutions and allows multiple blockchains to collaborate on the same contracts repository. By re-using the whole decentralised application blocks, it fosters building the decentralised solutions with the freedom to operate on multiple chains.
 t3rn facilitates building interoperable solutions in familiar smart contract languages like Solidity, !ink or directly in Web Assembly. Smart contracts or Modules for Runtime which are hosted on a decentralised execution platform, Circuit and can be executed on multiple integrated blockchains. These smart contracts are shared and are being collaboratively added by community. 
 
 [Learn more about Gateways and how to integrate with t3rn.](./gateway)
 
 ## Multi-chain execution platform - execute on Circuit
-Gateway Circuit shares the context of the overall Interoperable Transaction and passes it over to the Gateways. The context contains all of the necessary data base on the Parachains can decide whether to not proceed with the execution. 
-Gateway Circuit has an access to all of the ongoing Interoperable Transactions and before the execution is started the circuit checks if there is no two transactions changing the same account at the same time. 
+Gateway Circuit shares the context of the overall Interoperable Transaction and passes it over to the Gateways. The context contains all of the necessary data base on the Parachains which can decide whether to not proceed with the execution. 
+Gateway Circuit has an access to all of the ongoing Interoperable Transactions and before the execution is started, the circuit checks if there is no two transactions changing the same account at the same time. 
 
 [Work on the Circuit Prototype is currently in progress.](./pallets/circuit)
 
@@ -50,7 +50,7 @@ Creating safe solutions operating and synchronizing multiple blockchains comes w
 Multiple blockchains means that accounts and the storage allocated by them is located on different chains. Without the overarching synchronisation mechanism there is no guarantee that the state of accounts won't change while the interoperable transaction is executed. t3rn offers the interoperable execution protocol performed by Circuit, which manages the multi-chain transactions.
 
 ### Non-reversible
-Once a transaction is applied on a blockchain it's non-reversible, which constitutes a problem for transactions only considered useful if they succeed on multiple blockchains simultaneously. t3rn introduces multiple phases to execution of interoperable transactions and implements the safety mechanisms which are able to revert the execution on affected chains in case the overall interoperable transaction fails. 
+Once a transaction is applied on a blockchain it's non-reversible, which constitutes a problem for transactions. It is only considered useful if they succeed on multiple blockchains simultaneously. t3rn introduces multiple phases to execution of interoperable transactions and implements the safety mechanisms which are able to revert the execution on affected chains in case the overall interoperable transaction fails. 
 
 ### Complexity
 Designing interoperable solutions is complex and requires developers and users to operate on multiple blockchains, possibly creating multiple different accounts, acquiring multiple currencies, providing a way for different blockchains to communicate. t3rn brings that complexity down and offers services and packages that facilitate interoperable execution securely.
